@@ -53,7 +53,8 @@ second?.shareMessage()
  
  - experiment: Use optional chaining to call `shareMessage` on `third` and `fourth`. What happens?
  */
-
+third?.shareMessage()
+fourth?.shareMessage()
 
 
 /*:
@@ -63,6 +64,7 @@ second?.shareMessage()
  - experiment: Try printing the `message` directly from `second` using optional chaining (do not call `shareMessage`).
  
  */
+print(second?.message)
 
 
 
@@ -73,8 +75,10 @@ second?.shareMessage()
  - callout(Challenge): Use optional binding _with_ optional chaining to bind and print out just the `message` property of `third`.
  
  */
+if let third = third {
 
-
+    print(third.message)
+}
 
 /*:
  [Previous](@prev) | [Next](@next)

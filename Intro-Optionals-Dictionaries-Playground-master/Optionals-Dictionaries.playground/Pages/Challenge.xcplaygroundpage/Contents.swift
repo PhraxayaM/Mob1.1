@@ -22,6 +22,52 @@
 
 
 
+var yellowBook: [String: String] = [:]
+func addContacts(Name: String, phoneNumber: String) {
+    yellowBook[Name] = phoneNumber
+    print("\(Name) has been added to your phonebook.")
+}
+addContacts(Name: "Matthew", phoneNumber: "11111")
+
+func findContact(Name: String) {
+    if let lookUp = yellowBook[Name] {
+        print("\(Name) can be called at \(lookUp)")
+    } else {
+        print("\(yellowBook[Name]) is not in your phonebook!")
+    }
+}
+findContact(Name: "Matthew")
+
+func updateContact(Name: String, phoneNumber: String) {
+    if let update = yellowBook[Name] {
+        yellowBook[Name] = phoneNumber
+        print("\(Name) has been updated in your phonebook")
+    } else {
+        yellowBook[Name] = phoneNumber
+        print("\(Name) did not exist in your phonebook. It has now been added.")
+    }
+}
+    updateContact(Name: "jakakakaka", phoneNumber: "234324")
+    print(yellowBook)
+
+func deleteContact(Name: String) {
+    if let delete = yellowBook[Name] {
+        yellowBook[Name] = nil
+        print("\(Name) has been deleted from your contacts.")
+    } else {
+        print("\(Name) did not exist in your contacts.")
+    }
+}
+deleteContact(Name: "wefwef")
+print(yellowBook)
+//
+func allContacts() {
+    for y in yellowBook.keys {
+        findContact(Name: y)
+    }
+}
+
+//allContacts()
 
 
 
@@ -30,6 +76,62 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+//
+//
+//var phoneBook: [String: String] = [:]
+//func addContact(Name: String, phoneNumber: String) {
+//   phoneBook[Name] = phoneNumber
+//    print(phoneBook)
+//}
+//addContact(Name: "Matthew", phoneNumber: "916-307-2787")
+//
+//func findContact(Name: String) {
+//    if let Person = phoneBook[Name] {
+//        print("\(Name) can be called at \(Person)")
+//    } else {
+//        print("\(phoneBook[Name]) is not in your phonebook!")
+//    }
+//}
+//findContact(Name: "Matthew")
+//
+//func updateContact(Name: String, phoneNumber: String) {
+//    if let update = phoneBook[Name] {
+//       phoneBook[Name] = phoneNumber
+//        print("\(Name) has been updated in your phonebook")
+//    } else {
+//        print("\(Name) is not in the phonebook!")
+//    }
+//}
+//updateContact(Name: "Matthew", phoneNumber: "111111")
+//findContact(Name: "Matthew")
+//
+//func deleteContact(Name: String) {
+//    if let delete = phoneBook[Name] {
+//        phoneBook[Name] = nil
+//        print("\(Name) has been deleted from your contacts")
+//    } else {
+//        ("\(Name) does not exist in your contacts")
+//    }
+//}
+//
+//
+//
+//func allContacts() {
+//    for x in phoneBook.keys {
+//        findContact(Name: x)
+//    }
+//}
+//allContacts()
 
 
 /*:

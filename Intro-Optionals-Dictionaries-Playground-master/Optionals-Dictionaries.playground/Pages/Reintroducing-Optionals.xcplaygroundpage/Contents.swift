@@ -67,9 +67,18 @@ print(test)
         There were 3 nil values and the sum is 625.3.
  
  */
-var sum = 0
-var counter = 0
-sum = sum + test[counter]
+
+var sum: Double = 0
+var n = 0
+
+for i in test {
+    if let x = i {
+        sum += x
+    } else {
+        n += 1
+    }
+}
+print("There were \(n) nil values and the sum is \(sum)")
 
 /*:
  [Next](@next)
